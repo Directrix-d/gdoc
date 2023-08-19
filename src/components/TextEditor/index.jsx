@@ -5,7 +5,7 @@ import { convertFromRaw, convertToRaw, EditorState } from "draft-js";
 import { doc, setDoc, getDoc } from "@firebase/firestore";
 import { firestore } from "../../fireabase/config";
 
-const TextEditor = ({ uid,  }) => {
+const TextEditor = ({ uid, id  }) => {
   const [editorState, setEditorState] = useState(EditorState.createEmpty());
   useEffect(() => {
     const fetchData = async () => {
